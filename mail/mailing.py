@@ -7,7 +7,6 @@ import logging
 
 # Info SendGrid
 SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
-print(SENDGRID_API_KEY)
 TEMPLATE_ID = os.environ.get('TEMPLATE_ID')
 FROM_EMAIL = 'msereno@kyda.mx'
 TO_EMAILS = [('msereno@exire.mx', 'Miguel Angel Sereno')]
@@ -20,8 +19,6 @@ logger.setLevel(logging.INFO)
 
 # SendGrid
 def send_report(summary):
-
-    print("Send it")
     message = Mail(
         from_email=FROM_EMAIL,
         to_emails=TO_EMAILS)
